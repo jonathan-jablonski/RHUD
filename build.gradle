@@ -31,12 +31,3 @@ targetCompatibility = '11'
 tasks.withType(JavaCompile) {
 	options.encoding = 'UTF-8'
 }
-
-def pluginMainClass = 'RastaXP.PluginLauncher'
-
-tasks.register('run', JavaExec) {
-	classpath = sourceSets.test.runtimeClasspath
-	mainClass = pluginMainClass
-	jvmArgs "-ea"
-	args "--developer-mode", "--debug"
-}
